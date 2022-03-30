@@ -1,0 +1,139 @@
+/*
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 1.8rem;
+}
+.container{
+    max-width: 375px;
+    margin: 0 auto;
+}
+.card{
+    padding: 1.5rem;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 11px;
+}
+.img-link{
+    display: block;
+    position: relative;
+}
+.img-link:hover .middle{
+    opacity: 1;
+}
+.img-link:hover .card__overlay{
+    opacity: 0.5;
+}
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+.card__overlay{
+    position: absolute;
+    display: grid;
+    place-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: hsl(178, 100%, 50%)
+}
+.main-img{
+    width: 100%;
+    margin-bottom: 2.4rem;
+    display: block;
+}
+.card__title{
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.card__content-text p{
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+}
+.card__content-icons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+}
+.card__content-icons img{
+    margin-right: 1.2rem;
+}
+.card__content-icons div{
+    display: flex;
+    align-items: center;
+
+}
+.price__currency{
+    color: hsl(178, 100%, 50%);
+}
+.time-left__text{
+    color: hsl(215, 51%, 70%);
+}
+.divider{
+    height: 1px;
+    width: 100%;
+    background-color: hsl(215, 51%, 70%);
+    margin-bottom: 2.4rem;
+}
+.card__creator-footer{
+    display: flex;
+    align-items: center;
+}
+.card__creator-profile{
+    height: 4rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 1.2rem;
+}
+.footer-text{
+    color: hsl(215, 51%, 70%);
+}
+.footer-text span{
+    color: #fff;
+}
